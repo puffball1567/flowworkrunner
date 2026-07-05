@@ -1,0 +1,9 @@
+nimcache/
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.o
+*.out
+htmldocs/
