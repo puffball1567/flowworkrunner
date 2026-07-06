@@ -1,4 +1,4 @@
-version       = "0.1.0"
+version       = "0.2.0"
 author        = "flowworkrunner contributors"
 description   = "In-process work runner primitives for FlowBrigade Toolkit graphs."
 license       = "Apache-2.0"
