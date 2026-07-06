@@ -7,8 +7,8 @@ It is part of the **FlowBrigade Toolkit**.
 
 ## Status
 
-FlowWorkRunner v0.1.0 is focused on deterministic in-process execution. Within
-that scope, it provides:
+FlowWorkRunner v0.2.0 is focused on deterministic in-process execution and
+execution-shape metrics. Within that scope, it provides:
 
 - graph and task execution primitives
 - static ready-batch planning
@@ -17,6 +17,8 @@ that scope, it provides:
 - plugin-ready extension points
 - non-throwing run outcomes for FlowCaptain-style integration
 - run events that can be mapped to FlowLogbook
+- run metrics for batch count, max batch width, estimated elapsed time,
+  parallelism factor, and success rate
 - JSON report export
 - examples, tests, design notes, and benchmarks
 
@@ -57,6 +59,7 @@ executors.register("publish", proc(node: WorkNode): WorkTaskResult =
 let outcome = run(initWorkRunInput(graph, executors))
 if outcome.ok:
   echo outcome.report.toJsonString()
+  echo outcome.report.workRunMetrics().parallelismFactor
 else:
   echo outcome.errors
 ```
