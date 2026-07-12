@@ -7,7 +7,7 @@ It is part of the **FlowBrigade Toolkit**.
 
 ## Status
 
-FlowWorkRunner v0.2.0 is focused on deterministic in-process execution and
+FlowWorkRunner v0.2.1 is focused on deterministic in-process execution and
 execution-shape metrics. Within that scope, it provides:
 
 - graph and task execution primitives
@@ -97,7 +97,11 @@ FlowWorkRunner only depends on Nim's standard library.
 nimble test
 nimble examples
 nimble bench
+nimble leak
 ```
+
+`nimble leak` builds the ARC release leak probe and runs it under Valgrind,
+failing on definite or indirect leaks.
 
 ## Intellectual Property Notes
 
