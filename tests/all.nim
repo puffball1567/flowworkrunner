@@ -4,3 +4,4 @@ include ./test_executor
 include ./test_metrics
 include ./test_extension
 include ./test_jsonio
+include ./test_memory_model
